@@ -1,0 +1,422 @@
+.header {
+  height: 152px;
+  background: #000000;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 152px;
+  }
+
+  &__menu__links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+
+    & li:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      background: white;
+      height: 16px;
+      width: 1px;
+      margin-left: 15px;
+      cursor: default;
+    }
+
+    @media screen and (max-width:576px) {
+      & {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      & li:not(:last-child)::after {
+        content: none;
+      }
+    }
+  }
+
+  &__menu__link {
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+
+  }
+}
+
+.landing {
+  background: url("../assets/bachground.png") no-repeat center/cover;
+  height: 100%;
+  padding: 150px 0;
+
+  &__content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 85px;
+  }
+
+  &__subtitle {
+    font-size: 25px;
+    font-weight: 300;
+    padding: 50px 0;
+  }
+
+  @media screen and (max-width:768px) {
+    &__title {
+      font-size: 50px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+    }
+  }
+}
+
+.banner {
+  background: #F3F7EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 364px;
+
+  &__text {
+    font-size: 30px;
+    font-weight: 200;
+    text-align: center;
+    max-width: 920px;
+  }
+
+  @media screen and (max-width:768px) {
+    & {
+      height: 100%;
+      padding: 60px 10px;
+    }
+
+    &__text {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    & {
+      height: 100%;
+      padding: 30px 10px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
+.gallery {
+  padding: 100px 20px;
+
+  &__content {
+  }
+
+  &__imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width:768px) {
+    & {
+      padding: 50px 10px;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    & {
+      padding: 30px 5px;
+    }
+  }
+}
+
+.dishes {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__content {
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  &__subtitle {
+    font-size: 25px;
+    font-weight: 200;
+    padding: 35px 0;
+  }
+
+  &__favorites {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
+    gap: 40px;
+
+    @media screen and (max-width:1220px) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__favorite {
+    position: relative;
+    max-width: 387px;
+
+    @media screen and (max-width:1220px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      gap: 10px;
+    }
+
+    @media screen and (max-width:768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__first::before {
+    content: "";
+    top: -30px;
+    left: -30px;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background: url("../assets/hot.svg") no-repeat;
+  }
+
+  &__second::before {
+    content: "";
+    top: -30px;
+    left: -30px;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background: url("../assets/new.svg") no-repeat;
+  }
+
+  &__third::before {
+    content: "";
+    top: -30px;
+    left: -30px;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background: url("../assets/hit.svg") no-repeat;
+  }
+
+  &__favorite-img {
+    @media screen and (max-width:768px) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__favorite-title {
+    font-size: 30px;
+    font-weight: 400;
+    padding: 30px 0 20px 0;
+  }
+
+  &__favorite-subtitle {
+    font-size: 18px;
+    font-weight: 200;
+    padding-right: 10px;
+  }
+
+  &__favorite-price {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+
+  .dishes__btn {
+    margin-top: 100px;
+    border-color: black !important;
+    color: black !important;
+
+    &:hover {
+      color: #e8e8e8;
+      background: #949494 !important;
+    }
+  }
+
+
+  @media screen and (max-width:768px) {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  @media screen and (max-width:576px) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.chef {
+  padding: 100px 0;
+  background: #F3F7EA;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__img {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  &__position {
+    font-size: 25px;
+    font-weight: 200;
+    padding: 30px 0;
+  }
+
+  &__review {
+    max-width: 930px;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 137.3%;
+  }
+
+  @media screen and (max-width:992px) {
+    &__review {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    &__review {
+      font-size: 14px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #262626;
+  color: white;
+  padding: 70px 0;
+
+  &__title {
+    font-size: 65px;
+    font-weight: 600;
+  }
+
+  &__about-us {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  &__link__about-us {
+    line-height: 141.9%;
+    font-size: 35px;
+    font-weight: 200;
+    color: white;
+  }
+
+  &__description {
+    color: #B1B1B1;
+    font-size: 25px;
+    padding-bottom: 50px;
+  }
+
+  &__social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  @media screen and (max-width:992px) {
+    &__title {
+      font-size: 50px;
+    }
+
+    &__link__about-us {
+      font-size: 25px;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    &__title {
+      font-size: 40px;
+    }
+
+    &__link__about-us {
+      font-size: 20px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+  }
+}
+
+.default-btn {
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  padding: 10px 70px;
+  color: white;
+  transition: all 0.5s;
+
+  &:hover {
+    background: #282828;
+  }
+}

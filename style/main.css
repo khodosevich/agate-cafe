@@ -1,0 +1,366 @@
+.header {
+  height: 152px;
+  background: #000000;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 152px;
+}
+.header__menu__links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+.header__menu__links li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  background: white;
+  height: 16px;
+  width: 1px;
+  margin-left: 15px;
+  cursor: default;
+}
+@media screen and (max-width: 576px) {
+  .header__menu__links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .header__menu__links li:not(:last-child)::after {
+    content: none;
+  }
+}
+.header__menu__link {
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.landing {
+  background: url("../assets/bachground.png") no-repeat center/cover;
+  height: 100%;
+  padding: 150px 0;
+}
+.landing__content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.landing__title {
+  font-weight: 600;
+  font-size: 85px;
+}
+.landing__subtitle {
+  font-size: 25px;
+  font-weight: 300;
+  padding: 50px 0;
+}
+@media screen and (max-width: 768px) {
+  .landing__title {
+    font-size: 50px;
+  }
+  .landing__subtitle {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .landing__title {
+    font-size: 30px;
+  }
+  .landing__subtitle {
+    font-size: 16px;
+  }
+}
+
+.banner {
+  background: #F3F7EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 364px;
+}
+.banner__text {
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
+  max-width: 920px;
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 100%;
+    padding: 60px 10px;
+  }
+  .banner__text {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner {
+    height: 100%;
+    padding: 30px 10px;
+  }
+  .banner__text {
+    font-size: 18px;
+  }
+}
+
+.gallery {
+  padding: 100px 20px;
+}
+.gallery__imgs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    padding: 50px 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .gallery {
+    padding: 30px 5px;
+  }
+}
+
+.dishes {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.dishes__title {
+  font-weight: 500;
+  font-size: 40px;
+}
+.dishes__subtitle {
+  font-size: 25px;
+  font-weight: 200;
+  padding: 35px 0;
+}
+.dishes__favorites {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  gap: 40px;
+}
+@media screen and (max-width: 1220px) {
+  .dishes__favorites {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.dishes__favorite {
+  position: relative;
+  max-width: 387px;
+}
+@media screen and (max-width: 1220px) {
+  .dishes__favorite {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dishes__favorite {
+    flex-direction: column;
+  }
+}
+.dishes__first::before {
+  content: "";
+  top: -30px;
+  left: -30px;
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background: url("../assets/hot.svg") no-repeat;
+}
+.dishes__second::before {
+  content: "";
+  top: -30px;
+  left: -30px;
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background: url("../assets/new.svg") no-repeat;
+}
+.dishes__third::before {
+  content: "";
+  top: -30px;
+  left: -30px;
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background: url("../assets/hit.svg") no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .dishes__favorite-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.dishes__favorite-title {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 30px 0 20px 0;
+}
+.dishes__favorite-subtitle {
+  font-size: 18px;
+  font-weight: 200;
+  padding-right: 10px;
+}
+.dishes__favorite-price {
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 20px;
+}
+.dishes .dishes__btn {
+  margin-top: 100px;
+  border-color: black !important;
+  color: black !important;
+}
+.dishes .dishes__btn:hover {
+  color: #e8e8e8;
+  background: #949494 !important;
+}
+@media screen and (max-width: 768px) {
+  .dishes {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+@media screen and (max-width: 576px) {
+  .dishes {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.chef {
+  padding: 100px 0;
+  background: #F3F7EA;
+}
+.chef__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.chef__img {
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+}
+.chef__name {
+  font-size: 40px;
+  font-weight: 500;
+}
+.chef__position {
+  font-size: 25px;
+  font-weight: 200;
+  padding: 30px 0;
+}
+.chef__review {
+  max-width: 930px;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 137.3%;
+}
+@media screen and (max-width: 992px) {
+  .chef__review {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .chef__review {
+    font-size: 14px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #262626;
+  color: white;
+  padding: 70px 0;
+}
+.footer__title {
+  font-size: 65px;
+  font-weight: 600;
+}
+.footer__about-us {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+.footer__link__about-us {
+  line-height: 141.9%;
+  font-size: 35px;
+  font-weight: 200;
+  color: white;
+}
+.footer__description {
+  color: #B1B1B1;
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+.footer__social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (max-width: 992px) {
+  .footer__title {
+    font-size: 50px;
+  }
+  .footer__link__about-us {
+    font-size: 25px;
+  }
+  .footer__description {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__title {
+    font-size: 40px;
+  }
+  .footer__link__about-us {
+    font-size: 20px;
+  }
+  .footer__description {
+    font-size: 16px;
+  }
+}
+
+.default-btn {
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  padding: 10px 70px;
+  color: white;
+  transition: all 0.5s;
+}
+.default-btn:hover {
+  background: #282828;
+}
+
+/*# sourceMappingURL=main.css.map */
