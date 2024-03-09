@@ -1,12 +1,14 @@
 .header {
   height: 152px;
-  background: #000000;
 }
 .header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 152px;
+}
+.header__logo {
+  z-index: 10;
 }
 .header__menu__links {
   display: flex;
@@ -40,8 +42,9 @@
 
 .landing {
   background: url("../assets/bachground.png") no-repeat center/cover;
-  height: 100%;
-  padding: 150px 0;
+  height: 900px;
+  padding: 350px 0 150px 0;
+  margin-top: -150px;
 }
 .landing__content {
   color: white;
@@ -60,6 +63,10 @@
   padding: 50px 0;
 }
 @media screen and (max-width: 768px) {
+  .landing {
+    padding-top: 250px;
+    height: 750px;
+  }
   .landing__title {
     font-size: 50px;
   }
@@ -68,6 +75,10 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .landing {
+    padding-top: 200px;
+    height: 500px;
+  }
   .landing__title {
     font-size: 30px;
   }
@@ -163,7 +174,6 @@
 }
 .dishes__favorite {
   position: relative;
-  max-width: 387px;
 }
 @media screen and (max-width: 1220px) {
   .dishes__favorite {
@@ -182,8 +192,8 @@
 }
 .dishes__first::before {
   content: "";
-  top: -30px;
-  left: -30px;
+  top: -20px;
+  left: -20px;
   position: absolute;
   width: 58px;
   height: 58px;
@@ -191,8 +201,8 @@
 }
 .dishes__second::before {
   content: "";
-  top: -30px;
-  left: -30px;
+  top: -20px;
+  left: -20px;
   position: absolute;
   width: 58px;
   height: 58px;
@@ -200,8 +210,8 @@
 }
 .dishes__third::before {
   content: "";
-  top: -30px;
-  left: -30px;
+  top: -20px;
+  left: -20px;
   position: absolute;
   width: 58px;
   height: 58px;
@@ -223,6 +233,7 @@
   font-size: 18px;
   font-weight: 200;
   padding-right: 10px;
+  max-width: 387px;
 }
 .dishes__favorite-price {
   font-size: 18px;
