@@ -167,9 +167,6 @@
 .gallery {
   padding: 100px 20px;
 
-  &__content {
-  }
-
   &__imgs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -246,6 +243,7 @@
     &::before {
       display: block;
       transform: scale(1);
+      z-index: 2;
 
       content: "";
       top: -20px;
@@ -253,6 +251,20 @@
       position: absolute;
       width: 58px;
       height: 58px;
+    }
+
+    &-img {
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
@@ -269,14 +281,6 @@
   &__third::before {
     background: url("../assets/hit.svg") no-repeat;
     animation: pulse 1.9s infinite;
-  }
-
-  &__favorite-img {
-    @media screen and (max-width:768px) {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 
   &__favorite-title {
