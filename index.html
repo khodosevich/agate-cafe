@@ -9,144 +9,142 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/index.css">
-
+    <script src="./js/animation.js"></script>
     <title>AGATE</title>
 </head>
 <body>
-    <div class="wrapper">
+    <main class="page">
         <header class="header">
             <div class="container">
-                <div class="header__content">
-                    <div class="header__logo">
-                        <a href="/">
-                            <img src="./assets/logo.svg" alt="logo">
-                        </a>
-                    </div>
-                    <div class="header__menu">
-                        <ul class="header__menu__links">
-                            <li class="header__menu__link">О ресторане</li>
-                            <li class="header__menu__link">Меню</li>
-                            <li class="header__menu__link">Контакты</li>
-                        </ul>
-                    </div>
+                <div class="header__content">  
+                    <a data-animate-top style="transition-delay: .0s;" class="header__logo" href="/">
+                        AGATE
+                    </a>
+                    <ul class="header__links">
+                        <li class="header__link">О ресторане</li>
+                        <li class="header__link">Меню</li>
+                        <li class="header__link">Контакты</li>
+                    </ul>
                 </div>
             </div>
         </header>
 
-        <main class="page">
-            <section class="landing">
-                <div class="container">
-                    <div class="landing__content">
-                        <h1 class="landing__title">
-                            РЕСТОРАН<br>
-                            АВТОРСКОЙ КУХНИ
-                        </h1>
-                        <p class="landing__subtitle">
-                            Легкая атмосфера, европейская и азиатская кухня
-                        </p>
-                        <div class="landing__contact-us">
-                            <button class="landing__btn default-btn">Связаться с нами</button>
-                        </div>
+        <section class="landing">
+            <div class="container">
+                <div class="landing__content">
+                    <h1 class="landing__title" data-animate-top style="transition-delay: .2s;">
+                        РЕСТОРАН<br>
+                        АВТОРСКОЙ КУХНИ
+                    </h1>
+                    <p class="landing__subtitle" data-animate-top style="transition-delay: .5s;">
+                        Легкая атмосфера, европейская и азиатская кухня
+                    </p>
+                    <div class="landing__contact-us" data-animate-top style="transition-delay: .7s;">
+                        <a href="/contact-us" class="landing__link default-btn">Связаться с нами</a>
                     </div>
                 </div>
-            </section>
-            <section class="banner">
-                <div class="container">
-                    <div class="banner__content">
-                        <p class="banner__text">
-                            Мы понравимся вам своей легкой атмосферой, уровнем кухни и подачей блюд. Мы любим аристократичную простоту в интерьере, хорошую музыку и неповторимый ризотто нашего шефа, Максима Болова.
-                        </p>
-                    </div>
+            </div>
+        </section>
+
+        <section class="banner">
+            <div class="container">
+                <div class="banner__content">
+                    <p class="banner__text">
+                        Мы понравимся вам своей легкой атмосферой, уровнем кухни и подачей блюд. Мы любим аристократичную простоту в интерьере, хорошую музыку и неповторимый ризотто нашего шефа, Максима Болова.
+                    </p>
                 </div>
-            </section>
-            <section class="gallery">
-                <div class="gallery__content">
-                    <div class="gallery__imgs">
-                        <img src="./assets/1.png" alt="" class="gallery__img">
-                        <img src="./assets/2.png" alt="" class="gallery__img">
-                        <img src="./assets/3.png" alt="" class="gallery__img">
-                        <img src="./assets/4.png" alt="" class="gallery__img">
-                        <img src="./assets/5.png" alt="" class="gallery__img">
-                        <img src="./assets/6.png" alt="" class="gallery__img">
-                    </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery__content">
+                <div class="gallery__imgs">
+                    <img data-animate-top style="transition-delay: .1s;" src="./assets/kitchen.png" alt="kitchen" class="gallery__img">
+                    <img data-animate-top style="transition-delay: .2s;" src="./assets/fish-plate.png" alt="fish-plate" class="gallery__img">
+                    <img data-animate-top style="transition-delay: .3s;" src="./assets/burger-plate.png" alt="burger-plate" class="gallery__img">
+                    <img data-animate-top style="transition-delay: .4s;" src="./assets/tommates.png" alt="tommates" class="gallery__img">
+                    <img data-animate-top style="transition-delay: .5s;" src="./assets/restaurant.png" alt="restaurant" class="gallery__img">
+                    <img data-animate-top style="transition-delay: .6s;" src="./assets/piece-of-pie.png" alt="piece-of-pie" class="gallery__img">
                 </div>
-            </section>
-            <section class="dishes">
-                <div class="container">
-                    <div class="dishes__content">
-                        <h2 class="dishes__title">
-                            Избранные блюда нашего меню
-                        </h2>
-                        <p class="dishes__subtitle">
-                            Осеннее меню от шеф повара
-                        </p>
-                        <div class="dishes__favorites">
-                            <div class="dishes__favorite dishes__first">
-                                <img src="./assets/dishes1.png" alt="" class="dishes__favorite-img">
-                                <div>
-                                    <h3 class="dishes__favorite-title">
-                                        Тыквенный суп
-                                    </h3>
-                                    <p class="dishes__favorite-subtitle">
-                                        Осенний тыквенный суп. В игридиентах тыква, шампиньоны, щепотка мускатного ореха.
-                                    </p>
-                                    <p class="dishes__favorite-price">
-                                        1980р.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="dishes__favorite dishes__second">
-                                <img src="./assets/dishes2.png" alt="" class="dishes__favorite-img">
-                                <div>
-                                    <h3 class="dishes__favorite-title">
-                                        Парпаделле
-                                    </h3>
-                                    <p class="dishes__favorite-subtitle">
-                                        Итальянская паста с богатым вкусом свеклы и томатным песто, подается с базиликом и горошком.
-                                    </p>
-                                    <p class="dishes__favorite-price">
-                                        1400р.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="dishes__favorite dishes__third">
-                                <img src="./assets/dishes3.png" alt="" class="dishes__favorite-img">
-                                <div>
-                                    <h3 class="dishes__favorite-title">
-                                        Линч салат
-                                    </h3>
-                                    <p class="dishes__favorite-subtitle">
-                                        Питательный утренний салат - это просто белковая бомба для любителей фитнеса.
-                                    </p>
-                                    <p class="dishes__favorite-price">
-                                        1300р.
-                                    </p>
-                                </div>
+            </div>
+        </section>
+
+        <section class="dishes">
+            <div class="container">
+                <div class="dishes__content">
+                    <h2 class="dishes__title" data-animate style="transition-delay: .1s;">
+                        Избранные блюда нашего меню
+                    </h2>
+                    <p class="dishes__subtitle">
+                        Осеннее меню от шеф повара
+                    </p>
+                    <div class="dishes__favorites">
+                        <div class="dishes__favorite dishes__first" data-animate-top style="transition-delay: .4s;">
+                            <img src="./assets/dishes1.png" alt="" class="dishes__favorite-img">
+                            <div>
+                                <h3 class="dishes__favorite-title">
+                                    Тыквенный суп
+                                </h3>
+                                <p class="dishes__favorite-subtitle">
+                                    Осенний тыквенный суп. В игридиентах тыква, шампиньоны, щепотка мускатного ореха.
+                                </p>
+                                <p class="dishes__favorite-price">
+                                    1980р.
+                                </p>
                             </div>
                         </div>
-                        <button class="default-btn dishes__btn">
-                            Посмотреть меню
-                        </button>
+                        <div class="dishes__favorite dishes__second" data-animate-top style="transition-delay: .8s;">
+                            <img src="./assets/dishes2.png" alt="" class="dishes__favorite-img">
+                            <div>
+                                <h3 class="dishes__favorite-title">
+                                    Парпаделле
+                                </h3>
+                                <p class="dishes__favorite-subtitle">
+                                    Итальянская паста с богатым вкусом свеклы и томатным песто, подается с базиликом и горошком.
+                                </p>
+                                <p class="dishes__favorite-price">
+                                    1400р.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="dishes__favorite dishes__third" data-animate-top style="transition-delay: 1.2s;">
+                            <img src="./assets/dishes3.png" alt="" class="dishes__favorite-img">
+                            <div>
+                                <h3 class="dishes__favorite-title">
+                                    Линч салат
+                                </h3>
+                                <p class="dishes__favorite-subtitle">
+                                    Питательный утренний салат - это просто белковая бомба для любителей фитнеса.
+                                </p>
+                                <p class="dishes__favorite-price">
+                                    1300р.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    <a href="/menu" class="default-btn dishes__link">
+                        Посмотреть меню
+                    </a>
                 </div>
-            </section>
-            <section class="chef">
-                <div class="container">
-                    <div class="chef__content">
-                        <img src="./assets/chef.png" alt="" class="chef__img"/>
-                        <p class="chef__name">
-                            Максим Болов
-                        </p>
-                        <p class="chef__position">
-                            Шев повар AGATE
-                        </p>
-                        <p class="chef__review">
-                            Максим - ученик известного шеф повара Ерика Крауа. Принимает участие в крупнейших воркшопах, работал в ресторанах Франции, Бельгии и Финляндии. У Максима всегда свежее авторское видение меню.
-                        </p>
-                    </div>
+            </div>
+        </section>
+
+        <section class="chef">
+            <div class="container">
+                <div class="chef__content">
+                    <img data-animate-top style="transition-delay: .0s;" src="./assets/chef.png" alt="" class="chef__img"/>
+                    <p class="chef__name">
+                        Максим Болов
+                    </p>
+                    <p class="chef__position">
+                        Шев повар AGATE
+                    </p>
+                    <p class="chef__review">
+                        Максим - ученик известного шеф повара Ерика Крауа. Принимает участие в крупнейших воркшопах, работал в ресторанах Франции, Бельгии и Финляндии. У Максима всегда свежее авторское видение меню.
+                    </p>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
 
         <footer class="footer">
             <div class="container">
@@ -155,21 +153,21 @@
                         Свяжитесь с нами
                     </h2>
                     <div class="footer__about-us">
-                        <a href="tel:+1 123 456 78 90" class="footer__link__about-us">+1 123 456 78 90</a>
-                        <a href="mailto:agate@yandex.com" class="footer__link__about-us">agate@yandex.com</a>
-                        <a href="#" class="footer__link__about-us">Обводной канал, 75а. Санкт-Петербург</a>
+                        <a href="tel:+1 123 456 78 90" class="footer__link">+1 123 456 78 90</a>
+                        <a href="mailto:agate@yandex.com" class="footer__link">agate@yandex.com</a>
+                        <a href="#" class="footer__link">Обводной канал, 75а. Санкт-Петербург</a>
                     </div>
                     <p class="footer__description">
                         Мы открыты ежедневно в 12:00 - 12:00
                     </p>
                     <div class="footer__social-media">
-                        <img src="./assets/fb.svg" alt="" class="footer__social-media__link">
-                        <img src="./assets/x.svg" alt="" class="footer__social-media__link">
-                        <img src="./assets/inst.svg" alt="" class="footer__social-media__link">
+                        <a data-animate style="transition-delay: .0s;" class="footer__social-media-link facebook" href="https://www.facebook.com/"></a>
+                        <a data-animate style="transition-delay: .1s;" class="footer__social-media-link x" href="https://twitter.com/"></a>
+                        <a data-animate style="transition-delay: .2s;" class="footer__social-media-link instagram" href="https://www.instagram.com/"></a>
                     </div>
                 </div>
             </div>
         </footer>
-    </div>
+    </main>
 </body>
 </html>

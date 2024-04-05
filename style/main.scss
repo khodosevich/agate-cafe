@@ -1,5 +1,8 @@
 .header {
-  height: 152px;
+  height: 150px;
+  background-color: #0000006B;
+  backdrop-filter: blur(5px);
+  z-index: 10;
 
   &__content {
     display: flex;
@@ -10,9 +13,17 @@
 
   &__logo {
     z-index: 10;
+    font-size: 50px;
+    line-height: 62px;
+    color: #FFFFFF;
+    transition: all .3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
-  &__menu__links {
+  &__links {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -40,11 +51,16 @@
     }
   }
 
-  &__menu__link {
+  &__link {
     color: white;
     font-weight: 300;
     cursor: pointer;
+    transition: all .1s ease;
+    position: relative;
 
+    &:hover {
+      font-weight: 400;
+    }
   }
 }
 
@@ -72,6 +88,12 @@
     font-size: 25px;
     font-weight: 300;
     padding: 50px 0;
+  }
+
+  &__link {
+    &:hover {
+      background-color: #1a1a1a82 !important;
+    }
   }
 
   @media screen and (max-width:768px) {
@@ -181,9 +203,6 @@
   justify-content: center;
   text-align: center;
 
-  &__content {
-  }
-
   &__title {
     font-weight: 500;
     font-size: 40px;
@@ -223,36 +242,33 @@
     @media screen and (max-width:768px) {
       flex-direction: column;
     }
+
+    &::before {
+      display: block;
+      transform: scale(1);
+
+      content: "";
+      top: -20px;
+      left: -20px;
+      position: absolute;
+      width: 58px;
+      height: 58px;
+    }
   }
 
   &__first::before {
-    content: "";
-    top: -20px;
-    left: -20px;
-    position: absolute;
-    width: 58px;
-    height: 58px;
     background: url("../assets/hot.svg") no-repeat;
+    animation: pulse 2.3s infinite;
   }
 
   &__second::before {
-    content: "";
-    top: -20px;
-    left: -20px;
-    position: absolute;
-    width: 58px;
-    height: 58px;
     background: url("../assets/new.svg") no-repeat;
+    animation: pulse 2s infinite;
   }
 
   &__third::before {
-    content: "";
-    top: -20px;
-    left: -20px;
-    position: absolute;
-    width: 58px;
-    height: 58px;
     background: url("../assets/hit.svg") no-repeat;
+    animation: pulse 1.9s infinite;
   }
 
   &__favorite-img {
@@ -282,14 +298,13 @@
     padding-top: 20px;
   }
 
-  .dishes__btn {
+  &__link {
     margin-top: 100px;
     border-color: black !important;
     color: black !important;
 
     &:hover {
-      color: #e8e8e8;
-      background: #949494 !important;
+      background: #ebebeb;
     }
   }
 
@@ -321,6 +336,7 @@
     max-width: 250px;
     max-height: 250px;
     object-fit: cover;
+    margin-bottom: 20px;
   }
 
   &__name {
@@ -374,7 +390,7 @@
     padding: 40px 0;
   }
 
-  &__link__about-us {
+  &__link {
     line-height: 141.9%;
     font-size: 35px;
     font-weight: 200;
@@ -392,7 +408,29 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    &-link {
+      width: 50px;
+      height: 50px;
+      transition: all 0.1s ease;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+
+      &.facebook {
+        background-image: url("../assets/fb.svg");
+      }
+      &.x {
+        background-image: url("../assets/x.svg");
+      }
+      &.instagram {
+        background-image: url("../assets/inst.svg");
+      }
+    }
   }
+
+
 
   @media screen and (max-width:992px) {
     &__title {
@@ -429,9 +467,6 @@
   border: 2px solid white;
   padding: 10px 70px;
   color: white;
-  transition: all 0.5s;
-
-  &:hover {
-    background: #282828;
-  }
+  transition: all 0.2s;
+  display: inline-block;
 }
